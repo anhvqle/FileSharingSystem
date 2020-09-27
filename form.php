@@ -14,7 +14,7 @@
       while(!feof($file) ){
           // echo(gettype(fgets($file)));
           if($username == (string)fgets($file)){
-               echo("Username Found");
+               printf("Username Found");
           }
        }
 
