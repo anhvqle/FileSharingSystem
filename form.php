@@ -6,17 +6,18 @@
   </head>
   <body>
     <?php
-      $username = (string)$_POST['username'];
+      $username = $_POST['username']);
+      $username = trim($username);
       //echo("$username");
 
       $file = fopen("users.txt", "r");
 
       while(!feof($file) ){
-          // echo(gettype(fgets($file)));
-          // if($username == (string)fgets($file)){
-          //      printf("Username Found");
-          // }
-          echo(fgets($file));
+          echo(gettype(fgets($file)));
+          if($username == trim(fgets($file))){
+               printf("Username Found");
+          }
+          // echo(fgets($file));
        }
 
       fclose($file);
