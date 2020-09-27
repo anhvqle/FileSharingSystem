@@ -10,11 +10,10 @@
       //echo("$username");
 
       $file = fopen("users.txt", "r");
-      echo(gettype($username));
 
       while(!feof($file) ){
           // echo(gettype(fgets($file)));
-          if($username == fgets($file)){
+          if(strcmp($username, fgets($file)) == 0){
                echo("Username Found");
           }
        }
