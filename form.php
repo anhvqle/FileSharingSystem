@@ -7,14 +7,15 @@
   <body>
     <?php
       $username = $_POST['username'];
-      echo("$username");
+      //echo("$username");
 
       $file = fopen("users.txt", "r");
 
       while(!feof($file) ){
-          if($username == fgets($file)){
-               echo("Username Found");
-          }
+          echo(gettype(fgets($file)));
+          // if($username == fgets($file)){
+          //      echo("Username Found");
+          // }
        }
 
       fclose($file);
