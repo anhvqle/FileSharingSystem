@@ -5,6 +5,7 @@
     <title></title>
   </head>
   <body>
+    <h1>Welcome Back, Xuan Son!</h1>
     <form enctype="multipart/form-data" action="uploader.php" method="POST">
     <p>
       <input type="hidden" name="MAX_FILE_SIZE" value="20000000" />
@@ -15,7 +16,7 @@
     </p>
     </form>
     <?php
-      
+
     ?>
   </body>
 </html>

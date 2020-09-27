@@ -8,7 +8,7 @@ $file = fopen("users.txt", "r");
 while(!feof($file) ){
     if($username == trim(fgets($file))){
          //printf("Username Found");
-         header("Location: form.php");
+         header("Location: $username/form.php");
          exit;
     }
  }
