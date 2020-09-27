@@ -6,14 +6,14 @@
   </head>
   <body>
     <?php
-      $username = $_POST['username'];
+      $username = (string)$_POST['username'];
       //echo("$username");
 
       $file = fopen("users.txt", "r");
 
       while(!feof($file) ){
           // echo(gettype(fgets($file)));
-          if(strcmp($username, fgets($file)) == 0){
+          if($username == (string)fgets($file)){
                echo("Username Found");
           }
        }
