@@ -12,6 +12,7 @@ while(!feof($file) ){
          exit;
     }
  }
+ header("Location: userNotFound.html");
 
 fclose($file);
 ?>
