@@ -16,7 +16,7 @@ while(!feof($file) ){
  fclose($file);
 
 if($_POST("delete") != ""){
-     $deleteFile = $_POST("delete")
+     $deleteFile = trim($_POST("delete"));
      unlink("$username/$deleteFile");
 }
 
