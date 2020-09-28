@@ -33,11 +33,11 @@ while(!feof($file) ){
     <?php
           // Display all files
           $files = array_diff(scandir($username), array('.', '..'));
-          
           for ($i = 0; $i < count($files); $i++)  {
                $file = $files[$i];
+               echo("$file")
                $dir = htmlentities($username) + "/" + htmlentities($files[$i]);
-               echo("$dir")
+               
      ?>         
                     Filename: <?php $file ?>
                     <form action="<?php $dir ?>" method="post">
