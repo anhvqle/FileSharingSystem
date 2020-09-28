@@ -24,11 +24,12 @@ while(!feof($file) ){
 
 
  if($userDetected){
+     sleep(0.5);
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-     sleep(0.5);
+     
     <meta charset="utf-8">
     <title><?php echo(htmlentities($username)); ?></title>
     
