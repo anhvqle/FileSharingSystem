@@ -15,10 +15,13 @@ while(!feof($file) ){
  }
  fclose($file);
 
- $deleteFile = trim($_POST["delete"]);
-if($deleteFile != ""){
-     unlink("$username/$deleteFile");
-}
+ if(isset($_POST['delete'])){
+     $deleteFile = trim($_POST["delete"]);
+     $filepath = "$username/$deleteFile";
+     chmod($file_path, 0777);
+     unlink($filepath);
+ }
+ 
 
 
  if($userDetected){
@@ -61,7 +64,6 @@ if($deleteFile != ""){
       <label for="uploadfile_input">Choose a file to upload:</label> <input name="uploadedfile" type="file" id="uploadfile_input" />
     </p>
     <input type="hidden" name="username" value = <?php echo($username); ?>>
-    <input type="hidden" name="delete" value = "">
     <p>
       <input type="submit" value="Upload File" />
     </p>
