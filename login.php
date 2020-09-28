@@ -81,6 +81,22 @@ while(!feof($file) ){
      if( move_uploaded_file($_FILES['uploadedfile']['tmp_name'], $filepath) ){
           echo("upload_success");
           // header("Location: login.php");
+          $url =  "login.php";
+          $data = array('username' => $username);
+          // use key 'http' even if you send the request to https://...
+          $options = array(
+               'http' => array(
+               'header'  => "Content-type: application/x-www-form-urlencoded\r\n",
+               'method'  => 'POST',
+               'content' => http_build_query($data)
+               )
+          );
+          $context  = stream_context_create($options);
+          $result = file_get_contents($url, false, $context);
+          if ($result === FALSE) { /* Handle error */ }
+ 
+          var_dump($result);
+
           exit;
      }else{
           echo("upload_failure");
