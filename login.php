@@ -28,6 +28,7 @@ while(!feof($file) ){
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+     sleep(0.5);
     <meta charset="utf-8">
     <title><?php echo(htmlentities($username)); ?></title>
     
@@ -37,7 +38,6 @@ while(!feof($file) ){
  
     <h1>Welcome Back <?php echo(htmlentities($username)); ?></h1>
     <?php
-          sleep(1);
           // Display all files
           $files = array_diff(scandir($username), array('.', '..'));
           // print_r($files);
