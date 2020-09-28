@@ -35,15 +35,15 @@ while(!feof($file) ){
           $files = array_diff(scandir($username), array('.', '..'));
           for ($i = 0; $i < count($files); $i++)  {
                $file = $files[$i];
-               echo(
-                    "Filename: $file.htmlentities()
-                    <form action="$username/$files[$i]" method="post">
+     ?>         
+                    Filename: <?php $file.htmlentities() ?>
+                    <form action="<?php"$username/$files[$i]"?>" method="post">
                          <input type="submit" value="See file">
                     </form>
                     <form action="login.php" method="post">
                          <input type="submit" value="Delete">
                     </form>"
-               );
+     <?php          
            }
     ?>
     <form enctype="multipart/form-data" action="<?php echo htmlentities($_SERVER['PHP_SELF']); ?>" method="POST">
