@@ -20,7 +20,7 @@
         printf("<p><strong>%s</strong></p>\n",
           htmlentities($_POST['uploadedfile'])
         );
-        echo(htmlentities($_POST['uploadedfile']);
+        echo($_POST['uploadedfile']);
     }
     ?>
   </body>
