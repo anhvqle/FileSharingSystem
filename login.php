@@ -57,7 +57,7 @@ while(!feof($file) ){
      <?php     
           }
     ?>
-    <form enctype="multipart/form-data" method="POST">
+    <form enctype="multipart/form-data" action = "login.php" method="POST">
     <p>
       <input type="hidden" name="MAX_FILE_SIZE" value="20000000" />
       <label for="uploadfile_input">Choose a file to upload:</label> <input name="uploadedfile" type="file" id="uploadfile_input" />
