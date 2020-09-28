@@ -79,7 +79,10 @@ while(!feof($file) ){
         $filepath = "$username/$filename";
 
      if( move_uploaded_file($_FILES['uploadedfile']['tmp_name'], $filepath) ){
-          echo("setTimeOut(300);");
+          echo '<script type="text/javascript">',
+               'setTimeOut(300);',
+               '</script>'
+;
      }else{
           echo("upload_failure");
           exit;
