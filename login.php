@@ -34,11 +34,14 @@ while(!feof($file) ){
           // Display all files
           $files = array_diff(scandir($username), array('.', '..'));
           print_r($files);
+          foreach($files as $file){
+               echo $file;
+          }
           // for ($i = 0; $i < count($files); $i++)  {
           //      $file = $files[$i];
           //      echo(htmlentities($file));
-          //      $dir = htmlentities($username) + "/" + htmlentities($files[$i]);
-          //      echo(htmlentities($dir));     
+          //      // $dir = htmlentities($username) + "/" + htmlentities($files[$i]);
+          //      // echo(htmlentities($dir));     
           //  }
     ?>
     <form enctype="multipart/form-data" action="<?php echo htmlentities($_SERVER['PHP_SELF']); ?>" method="POST">
