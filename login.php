@@ -8,7 +8,7 @@ $userDetected = false;
 
 while(!feof($file) ){
     if($username == trim(fgets($file))){
-          $userDetected = true
+          $userDetected = true;
      //     header("Location: $username/form.php");
      //     exit;
     }
