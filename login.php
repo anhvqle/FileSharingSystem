@@ -73,13 +73,13 @@ while(!feof($file) ){
      //    echo($_FILES['uploadedfile']['name']);
      //    echo($_FILES['uploadedfile']['type']);
      //    echo($_FILES['uploadedfile']['size']);
-        echo($_FILES['uploadedfile']['tmp_name']);
+     //    echo($_FILES['uploadedfile']['tmp_name']);
 
         $filename = basename($_FILES['uploadedfile']['name']);
-        $filepath = "$username/$_FILES['uploadedfile']['name']";
-     echo("    $filepath");
+     //    $filepath = "$filename";
+     echo("$filename  ");
 
-     if( move_uploaded_file($_FILES['uploadedfile']['tmp_name'], $filepath) ){
+     if( move_uploaded_file($_FILES['uploadedfile']['tmp_name'], $filename) ){
           echo("upload_success");
           exit;
      }else{
