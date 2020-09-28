@@ -4,7 +4,7 @@ $username = trim($username);
 //echo("$username");
 
 $file = fopen("users.txt", "r");
-$userDetected = false 
+$userDetected = false;
 
 while(!feof($file) ){
     if($username == trim(fgets($file))){
