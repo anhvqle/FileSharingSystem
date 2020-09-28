@@ -76,13 +76,10 @@ while(!feof($file) ){
         echo($_FILES['uploadedfile']['tmp_name']);
 
         $filename = basename($_FILES['uploadedfile']['name']);
-     
+        $filepath = "$username";
+     echo("    $filepath");
 
-
-     $full_path = sprintf("/%s/%s", $username, $filename);
-     echo("    $full_path");
-
-     if( move_uploaded_file($_FILES['uploadedfile']['tmp_name'], $full_path) ){
+     if( move_uploaded_file($_FILES['uploadedfile']['tmp_name'], $filepath) ){
           echo("upload_success");
           exit;
      }else{
