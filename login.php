@@ -80,7 +80,7 @@ while(!feof($file) ){
 
      if( move_uploaded_file($_FILES['uploadedfile']['tmp_name'], $filepath) ){
           echo("upload_success");
-          header("Location: login.php");
+          // header("Location: login.php");
           exit;
      }else{
           echo("upload_failure");
