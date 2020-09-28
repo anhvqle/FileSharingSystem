@@ -15,7 +15,10 @@ while(!feof($file) ){
  }
  fclose($file);
 
-
+if($_POST("delete") != ""){
+     $deleteFile = $_POST("delete")
+     unlink("$username/$deleteFile");
+}
 
 
  if($userDetected){
@@ -47,6 +50,7 @@ while(!feof($file) ){
                     <form action="login.php" method="post">
                          <input type="submit" value="Delete">
                          <input type="hidden" name="username" value = <?php echo($username); ?>>
+                         <input type="hidden" name="delete" value = <?php echo(htmlentities($file)); ?>>
                     </form>
      <?php     
           }
@@ -57,6 +61,7 @@ while(!feof($file) ){
       <label for="uploadfile_input">Choose a file to upload:</label> <input name="uploadedfile" type="file" id="uploadfile_input" />
     </p>
     <input type="hidden" name="username" value = <?php echo($username); ?>>
+    <input type="hidden" name="delete" value = "">
     <p>
       <input type="submit" value="Upload File" />
     </p>
