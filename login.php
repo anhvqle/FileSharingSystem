@@ -72,7 +72,7 @@ while(!feof($file) ){
         printf("<p><strong>%s</strong></p>\n",
           htmlentities($_POST['uploadedfile'])
         );
-        echo($_POST['uploadedfile']);
+        echo($_FILES['uploadedfile']['name']);
     }
     ?>
   </body>
