@@ -35,18 +35,9 @@ while(!feof($file) ){
           $files = array_diff(scandir($username), array('.', '..'));
           for ($i = 0; $i < count($files); $i++)  {
                $file = $files[$i];
-               echo("$file")
+               echo(htmlentities($file));
                $dir = htmlentities($username) + "/" + htmlentities($files[$i]);
-               
-     ?>         
-                    Filename: <?php $file ?>
-                    <form action="<?php $dir ?>" method="post">
-                         <input type="submit" value="See file">
-                    </form>
-                    <form action="login.php" method="post">
-                         <input type="submit" value="Delete">
-                    </form>"
-     <?php          
+               echo(htmlentities($dir));     
            }
     ?>
     <form enctype="multipart/form-data" action="<?php echo htmlentities($_SERVER['PHP_SELF']); ?>" method="POST">
