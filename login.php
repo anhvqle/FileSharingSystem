@@ -36,13 +36,13 @@ while(!feof($file) ){
           for ($i = 0; $i < count($files); $i++)  {
                $file = $files[$i];
                echo(
-                    Filename: $file.htmlentities()
+                    "Filename: $file.htmlentities()
                     <form action="$username/$files[$i]" method="post">
                          <input type="submit" value="See file">
                     </form>
                     <form action="login.php" method="post">
                          <input type="submit" value="Delete">
-                    </form>
+                    </form>"
                );
            }
     ?>
