@@ -31,7 +31,7 @@ while(!feof($file) ){
     <?php
           //
           $files = scandir($username);
-          $files = array_diff(scandir($path), array('.', '..'));
+          // $files = array_diff(scandir($username), array('.', '..'));
           echo($files)
     ?>
     <form enctype="multipart/form-data" action="<?php echo htmlentities($_SERVER['PHP_SELF']); ?>" method="POST">
