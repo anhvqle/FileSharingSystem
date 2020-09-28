@@ -18,7 +18,6 @@ while(!feof($file) ){
  if(isset($_POST['delete'])){
      $deleteFile = trim($_POST["delete"]);
      $filepath = "$username/$deleteFile";
-     chmod($file_path, 0777);
      unlink($filepath);
  }
  
