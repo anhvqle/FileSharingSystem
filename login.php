@@ -35,7 +35,9 @@ while(!feof($file) ){
           $files = array_diff(scandir($username), array('.', '..'));
           print_r($files);
           foreach($files as $file){
-               echo $file;
+               //echo $file;
+               $dir = htmlentities($username) + "/" + htmlentities($file);
+               echo(htmlentities($dir));   
           }
           // for ($i = 0; $i < count($files); $i++)  {
           //      $file = $files[$i];
