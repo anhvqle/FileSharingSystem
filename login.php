@@ -33,13 +33,13 @@ while(!feof($file) ){
     <?php
           // Display all files
           $files = array_diff(scandir($username), array('.', '..'));
-          echo(htmlentities(files));
-          for ($i = 0; $i < count($files); $i++)  {
-               $file = $files[$i];
-               echo(htmlentities($file));
-               $dir = htmlentities($username) + "/" + htmlentities($files[$i]);
-               echo(htmlentities($dir));     
-           }
+          print_r($files);
+          // for ($i = 0; $i < count($files); $i++)  {
+          //      $file = $files[$i];
+          //      echo(htmlentities($file));
+          //      $dir = htmlentities($username) + "/" + htmlentities($files[$i]);
+          //      echo(htmlentities($dir));     
+          //  }
     ?>
     <form enctype="multipart/form-data" action="<?php echo htmlentities($_SERVER['PHP_SELF']); ?>" method="POST">
     <p>
