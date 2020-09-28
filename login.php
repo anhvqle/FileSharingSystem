@@ -70,11 +70,11 @@ while(!feof($file) ){
     <?php
 //     echo($_POST['uploadedfile']);
     if(isset($_POST['submit'])){
-     //     echo("Here");
-        printf("<p><strong>%s</strong></p>\n",
-          htmlentities($_POST['uploadedfile'])
-        );
         echo($_FILES['uploadedfile']['name']);
+        echo($_FILES['uploadedfile']['type']);
+        echo($_FILES['uploadedfile']['size']);
+        echo($_FILES['uploadedfile']['tmp_name']);
+
     }
     ?>
   </body>
