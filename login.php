@@ -24,22 +24,22 @@ while(!feof($file) ){
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title><?php echo($username.htmlentities()); ?></title>
+    <title><?php echo(htmlentities($username)); ?></title>
   </head>
 
   <body>
        
-    <h1>Welcome Back <?php echo($username.htmlentities()); ?></h1>
+    <h1>Welcome Back <?php echo(htmlentities($username)); ?></h1>
     <?php
           // Display all files
           $files = array_diff(scandir($username), array('.', '..'));
           
           for ($i = 0; $i < count($files); $i++)  {
                $file = $files[$i];
-               $dir = "$username.htmlentities()/$files[$i].htmlentities()";
+               $dir = htmlentities($username) + "/" + htmlentities($files[$i]);
      ?>         
-                    Filename: <?php $file.htmlentities() ?>
-                    <form action="<?php $dir.htmlentities() ?>" method="post">
+                    Filename: <?php htmlentities($file) ?>
+                    <form action="<?php htmlentities($dir) ?>" method="post">
                          <input type="submit" value="See file">
                     </form>
                     <form action="login.php" method="post">
