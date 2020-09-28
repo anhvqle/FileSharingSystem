@@ -69,6 +69,7 @@ while(!feof($file) ){
     </form>
     <?php
     if(isset($_POST['uploadedfile'])){
+         echo("Here")
         printf("<p><strong>%s</strong></p>\n",
           htmlentities($_POST['uploadedfile'])
         );
