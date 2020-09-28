@@ -33,11 +33,13 @@ while(!feof($file) ){
     <?php
           // Display all files
           $files = array_diff(scandir($username), array('.', '..'));
+          
           for ($i = 0; $i < count($files); $i++)  {
                $file = $files[$i];
+               $dir = "$username.htmlentities()/$files[$i].htmlentities()";
      ?>         
                     Filename: <?php $file.htmlentities() ?>
-                    <form action="<?php"$username/$files[$i]"?>" method="post">
+                    <form action="<?php $dir.htmlentities() ?>" method="post">
                          <input type="submit" value="See file">
                     </form>
                     <form action="login.php" method="post">
