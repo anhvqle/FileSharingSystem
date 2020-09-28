@@ -83,6 +83,7 @@ while(!feof($file) ){
           exit;
      }else{
           echo("upload_failure");
+          header("Location: login.php");
           exit;
      }
 
