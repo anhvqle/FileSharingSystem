@@ -33,6 +33,7 @@ while(!feof($file) ){
     <?php
           // Display all files
           $files = array_diff(scandir($username), array('.', '..'));
+          echo(htmlentities(files));
           for ($i = 0; $i < count($files); $i++)  {
                $file = $files[$i];
                echo(htmlentities($file));
