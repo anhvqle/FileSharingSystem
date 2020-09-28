@@ -27,7 +27,7 @@ while(!feof($file) ){
     <title></title>
   </head>
   <body>
-    <h1>Welcome Back <?php $username ?></h1>
+    <h1>Welcome Back <?php echo($username); ?></h1>
     <form enctype="multipart/form-data" action="<?php echo htmlentities($_SERVER['PHP_SELF']); ?>" method="POST">
     <p>
       <input type="hidden" name="MAX_FILE_SIZE" value="20000000" />
