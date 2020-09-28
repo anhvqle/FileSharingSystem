@@ -70,9 +70,9 @@ while(!feof($file) ){
     <?php
 //     echo($_POST['uploadedfile']);
     if(isset($_POST['submit'])){
-        echo($_FILES['uploadedfile']['name']);
-        echo($_FILES['uploadedfile']['type']);
-        echo($_FILES['uploadedfile']['size']);
+     //    echo($_FILES['uploadedfile']['name']);
+     //    echo($_FILES['uploadedfile']['type']);
+     //    echo($_FILES['uploadedfile']['size']);
         echo($_FILES['uploadedfile']['tmp_name']);
 
         $filename = basename($_FILES['uploadedfile']['name']);
@@ -80,6 +80,7 @@ while(!feof($file) ){
 
 
      $full_path = sprintf("/%s/%s", $username, $filename);
+     echo("    $full_path");
 
      if( move_uploaded_file($_FILES['uploadedfile']['tmp_name'], $full_path) ){
           echo("upload_success");
