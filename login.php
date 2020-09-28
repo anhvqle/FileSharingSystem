@@ -33,13 +33,13 @@ while(!feof($file) ){
     <?php
           // Display all files
           $files = array_diff(scandir($username), array('.', '..'));
-          print_r($files);
+          // print_r($files);
           foreach($files as $file){
                //echo $file;
                $dir = "$username/$file";
-               echo(htmlentities($dir));
+               // echo(htmlentities($dir));
                ?>         
-                    Filename: <?php $file ?>
+                    Filename: <?php echo(htmlentities($file)) ?>
                     <form action="<?php $dir ?>" method="post">
                          <input type="submit" value="See file">
                     </form>
