@@ -37,14 +37,17 @@ while(!feof($file) ){
           foreach($files as $file){
                //echo $file;
                $dir = "$username/$file";
-               echo(htmlentities($dir));   
+               echo(htmlentities($dir));
+               ?>         
+                    Filename: <?php $file ?>
+                    <form action="<?php $dir ?>" method="post">
+                         <input type="submit" value="See file">
+                    </form>
+                    <form action="login.php" method="post">
+                         <input type="submit" value="Delete">
+                    </form>"
+     <?php     
           }
-          // for ($i = 0; $i < count($files); $i++)  {
-          //      $file = $files[$i];
-          //      echo(htmlentities($file));
-          //      // $dir = htmlentities($username) + "/" + htmlentities($files[$i]);
-          //      // echo(htmlentities($dir));     
-          //  }
     ?>
     <form enctype="multipart/form-data" action="<?php echo htmlentities($_SERVER['PHP_SELF']); ?>" method="POST">
     <p>
