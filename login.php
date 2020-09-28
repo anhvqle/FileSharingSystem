@@ -24,7 +24,7 @@ while(!feof($file) ){
 
 
  if($userDetected){
-     sleep(0.5);
+     
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -83,6 +83,7 @@ while(!feof($file) ){
 
      if( move_uploaded_file($_FILES['uploadedfile']['tmp_name'], $filepath) ){
           echo("upload_success");
+          sleep(0.5);
           exit;
      }else{
           echo("upload_failure");
