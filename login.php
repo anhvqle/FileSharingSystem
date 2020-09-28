@@ -32,7 +32,9 @@ while(!feof($file) ){
           //
           $files = scandir($username);
           // $files = array_diff(scandir($username), array('.', '..'));
-          echo($files)
+          for ($i = 0; $i < count($files); $i++)  {
+               echo $files[$i] ."<br />";
+           }
     ?>
     <form enctype="multipart/form-data" action="<?php echo htmlentities($_SERVER['PHP_SELF']); ?>" method="POST">
     <p>
