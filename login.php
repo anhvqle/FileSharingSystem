@@ -28,6 +28,12 @@ while(!feof($file) ){
   </head>
   <body>
     <h1>Welcome Back <?php echo($username); ?></h1>
+    <?php
+          //
+          $files = scandir($username);
+          $files = array_diff(scandir($path), array('.', '..'));
+          echo($files)
+    ?>
     <form enctype="multipart/form-data" action="<?php echo htmlentities($_SERVER['PHP_SELF']); ?>" method="POST">
     <p>
       <input type="hidden" name="MAX_FILE_SIZE" value="20000000" />
