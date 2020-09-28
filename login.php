@@ -3,7 +3,7 @@ $username = $_POST['username'];
 $username = trim($username);
 //echo("$username");
 
-$file = fopen("/home/talekien1710/securedLocation/users.txt", "r");
+$file = fopen("/../../securedLocation/users.txt", "r");
 $userDetected = false;
 
 while(!feof($file) ){
