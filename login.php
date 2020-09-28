@@ -76,7 +76,7 @@ while(!feof($file) ){
         echo($_FILES['uploadedfile']['tmp_name']);
 
         $filename = basename($_FILES['uploadedfile']['name']);
-        $filepath = "$username";
+        $filepath = "$username/$_FILES['uploadedfile']['name']";
      echo("    $filepath");
 
      if( move_uploaded_file($_FILES['uploadedfile']['tmp_name'], $filepath) ){
