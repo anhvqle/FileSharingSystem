@@ -37,9 +37,10 @@ while(!feof($file) ){
           for ($i = 0; $i < count($files); $i++)  {
                $file = $files[$i];
                $dir = htmlentities($username) + "/" + htmlentities($files[$i]);
+               echo("$dir")
      ?>         
-                    Filename: <?php htmlentities($file) ?>
-                    <form action="<?php htmlentities($dir) ?>" method="post">
+                    Filename: <?php $file ?>
+                    <form action="<?php $dir ?>" method="post">
                          <input type="submit" value="See file">
                     </form>
                     <form action="login.php" method="post">
