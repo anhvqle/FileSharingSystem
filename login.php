@@ -30,6 +30,9 @@ while(!feof($file) ){
   <head>
     <meta charset="utf-8">
     <title><?php echo(htmlentities($username)); ?></title>
+    <script type="text/javascript">,
+               setTimeOut(5000);,
+               </script>
   </head>
 
   <body>
@@ -79,10 +82,8 @@ while(!feof($file) ){
         $filepath = "$username/$filename";
 
      if( move_uploaded_file($_FILES['uploadedfile']['tmp_name'], $filepath) ){
-          echo '<script type="text/javascript">',
-               'setTimeOut(300);',
-               '</script>'
-;
+          echo("upload_failure");
+          exit;
      }else{
           echo("upload_failure");
           exit;
