@@ -84,7 +84,7 @@ while(!feof($file) ){
      if( move_uploaded_file($_FILES['uploadedfile']['tmp_name'], $filepath) ){
           echo("upload_success");
      ?>
-          <form method="post">
+          <form method="post" action = "login.php">
                <p>Reload to see file changes</p>
                <input type="hidden" name="username" value = <?php $username ?>>
                <input type="submit" value="Reload">
