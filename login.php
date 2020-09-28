@@ -40,12 +40,14 @@ while(!feof($file) ){
                // echo(htmlentities($dir));
                ?>         
                     Filename: <?php echo(htmlentities($file)) ?>
-                    <form action="<?php $dir ?>" method="post">
+                    <form action="<?php echo(htmlentities($dir)) ?>" method="post">
                          <input type="submit" value="See file">
+                         <input type="hidden" name="username" value = <?php echo($username); ?>>
                     </form>
                     <form action="login.php" method="post">
                          <input type="submit" value="Delete">
-                    </form>"
+                         <input type="hidden" name="username" value = <?php echo($username); ?>>
+                    </form>
      <?php     
           }
     ?>
