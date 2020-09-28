@@ -20,20 +20,30 @@ while(!feof($file) ){
 
  if($userDetected){
 ?>
-     <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title><?php echo($username.htmlentities()); ?></title>
   </head>
+
   <body>
-    <h1>Welcome Back <?php echo($username); ?></h1>
+       
+    <h1>Welcome Back <?php echo($username.htmlentities()); ?></h1>
     <?php
-          //
-          $files = scandir($username);
-          // $files = array_diff(scandir($username), array('.', '..'));
+          // Display all files
+          $files = array_diff(scandir($username), array('.', '..'));
           for ($i = 0; $i < count($files); $i++)  {
-               echo $files[$i] ."<br />";
+               $file = $files[$i];
+               echo(
+                    Filename: $file.htmlentities()
+                    <form action="$username/$files[$i]" method="post">
+                         <input type="submit" value="See file">
+                    </form>
+                    <form action="login.php" method="post">
+                         <input type="submit" value="Delete">
+                    </form>
+               );
            }
     ?>
     <form enctype="multipart/form-data" action="<?php echo htmlentities($_SERVER['PHP_SELF']); ?>" method="POST">
