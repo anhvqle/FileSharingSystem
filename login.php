@@ -57,19 +57,19 @@ while(!feof($file) ){
      <?php     
           }
     ?>
-    <form enctype="multipart/form-data" action = "login.php" method="POST">
+    <form enctype="multipart/form-data" action = "login.php" method="post">
     <p>
       <input type="hidden" name="MAX_FILE_SIZE" value="20000000" />
       <label for="uploadfile_input">Choose a file to upload:</label> <input name="uploadedfile" type="file" id="uploadfile_input" />
     </p>
     <input type="hidden" name="username" value = <?php echo($username); ?>>
     <p>
-      <input type="submit" value="Upload File" />
+      <input type="submit" name="submit" value="Upload File" />
     </p>
     </form>
     <?php
 //     echo($_POST['uploadedfile']);
-    if(isset($_POST['uploadedfile'])){
+    if(isset($_POST['submit'])){
      //     echo("Here");
         printf("<p><strong>%s</strong></p>\n",
           htmlentities($_POST['uploadedfile'])
