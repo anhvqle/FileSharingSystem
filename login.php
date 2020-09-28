@@ -30,15 +30,14 @@ while(!feof($file) ){
   <head>
     <meta charset="utf-8">
     <title><?php echo(htmlentities($username)); ?></title>
-    <script type="text/javascript">,
-               setTimeOut(5000);,
-               </script>
+    
   </head>
 
   <body>
-       
+ 
     <h1>Welcome Back <?php echo(htmlentities($username)); ?></h1>
     <?php
+          sleep(1);
           // Display all files
           $files = array_diff(scandir($username), array('.', '..'));
           // print_r($files);
@@ -82,7 +81,7 @@ while(!feof($file) ){
         $filepath = "$username/$filename";
 
      if( move_uploaded_file($_FILES['uploadedfile']['tmp_name'], $filepath) ){
-          echo("upload_failure");
+          echo("upload_success");
           exit;
      }else{
           echo("upload_failure");
