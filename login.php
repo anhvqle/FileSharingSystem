@@ -36,7 +36,7 @@ while(!feof($file) ){
           print_r($files);
           foreach($files as $file){
                //echo $file;
-               $dir = htmlentities($username) + "/" + htmlentities($file);
+               $dir = "$username/$file";
                echo(htmlentities($dir));   
           }
           // for ($i = 0; $i < count($files); $i++)  {
