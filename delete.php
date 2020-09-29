@@ -22,7 +22,7 @@ $username = trim($username);
           <input type="submit" value="Display" id = "deleteBtn">
      </form>  
      <script>
-        document.getGetElementById("deleteBtn").submit();
+        document.getGetElementById("deleteBtn").click();
     </script>
      
 </body>
