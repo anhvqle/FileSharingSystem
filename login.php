@@ -31,11 +31,12 @@ while(!feof($file) ){
 
 
  if($userDetected){
-     $url = 'dislay.php';
-     $data = array('username' => $username);
-     httpPost($url, $data);
-     header("Location: display.php");
-
+     ?>
+     <form action="display.php" method="post">
+          <p>Login success: Click to direct to your file system</p>
+          <input type="hidden" name="username" value = <?php $username ?>>
+     </form>  
+     <?php
  }
  else{
      header("Location: userNotFound.html");
