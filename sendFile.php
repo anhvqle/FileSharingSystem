@@ -24,18 +24,19 @@
               header("Location: display.php");
               exit;
          }else{
-              echo("upload_failure");
+              echo("<h1>upload_failure</h1>");
               
               exit;
          }
     
         }
         else{
-            echo("POST not found");
+            echo("<h1>POST request not found</h1>");
         }
         exit;
     }
+    
     else{
-        echo("User not detected");
+        echo("<h1>User not detected</h1>");
     }
 ?>
