@@ -16,7 +16,7 @@ $username = trim($username);
           <input type="submit" value="Display">
      </form>  
      <script>
-        document.getGetElementByIf("delete").submit() 
+        document.getGetElementById("delete").submit() 
     </script>
      
 </body>
