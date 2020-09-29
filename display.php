@@ -27,7 +27,7 @@ $username = trim($username);
                // echo(htmlentities($dir));
                ?>         
                     Filename: <a href=<?php echo(htmlentities($dir)) ?>><?php echo(htmlentities($file)) ?></a>
-                    
+
                     <form action="delete.php" method="post">
                          <input type="submit" value="Delete">
                          <input type="hidden" name="delete" value = <?php echo(htmlentities($file)); ?>>
@@ -45,7 +45,7 @@ $username = trim($username);
     </p>
     </form>
     
-    <form action="index.html" method="post">
+    <form action="index.html">
         <input type="submit" value="Logout">
     </form>
   </body>
