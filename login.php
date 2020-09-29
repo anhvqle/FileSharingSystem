@@ -21,10 +21,13 @@ while(!feof($file) ){
 
  if($userDetected){
      ?>
-     <form action="display.php" method="post">
+     <body>
+          <form action="display.php" method="post">
           <p>Login success: Click to direct to your file system</p>
           <input type="hidden" name="username" value = <?php $username ?>>
      </form>  
+     </body>
+     
      <?php
  }
  else{
