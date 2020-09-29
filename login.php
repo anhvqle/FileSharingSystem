@@ -18,19 +18,15 @@ while(!feof($file) ){
      //     header("Location: $username/form.php");
      //     exit;
     }
- }
- fclose($file);
+}
+fclose($file);
 
-
- 
-
-
- if($userDetected){
-     header("Location: display.php");
-     exit;
- }
- else{
-     header("Location: userNotFound.html");
- }
+if($userDetected){
+   header("Location: display.php");
+   exit;
+}
+else{
+   header("Location: userNotFound.html");
+}
 
 ?>
