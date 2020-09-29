@@ -30,6 +30,9 @@
          }
     
         }
+        else{
+            echo("POST not found");
+        }
         exit;
     }
     else{
