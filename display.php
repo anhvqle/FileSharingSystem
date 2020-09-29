@@ -1,3 +1,7 @@
+<?php
+$username = $_POST['username'];
+$username = trim($username);
+?>
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
