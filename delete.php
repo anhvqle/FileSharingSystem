@@ -8,9 +8,9 @@ $username = trim($username);
      $filepath = "$username/$deleted";
      unlink($filepath);
  }
- echo("filepath: $filepath     ");
- echo("deleted: $deleted     ");
- echo("username: $username     ");
- echo("deleteFile: $deleteFile     ");
-//header("Location: display.php");
+//  echo("filepath: $filepath     ");
+//  echo("deleted: $deleted     ");
+//  echo("username: $username     ");
+//  echo("deleteFile: $deleteFile     ");
+header("Location: display.php");
 ?>

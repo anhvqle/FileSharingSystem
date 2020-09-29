@@ -48,7 +48,7 @@ $username = trim($username);
     </form>
 
     <br><br>
-    <p>Send files to another users </p>
+    <h2>Send files to another users </h2>
     <form enctype="multipart/form-data" action = "sendFile.php" method="post">
     <p>
       <input type="hidden" name="MAX_FILE_SIZE" value="20000000" />
