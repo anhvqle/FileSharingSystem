@@ -26,8 +26,8 @@ $username = trim($username);
                $dir = "$username/$file";
                // echo(htmlentities($dir));
                ?>         
-                    Filename: <?php echo(htmlentities($file)) ?>
-                    <a href=<?php echo(htmlentities($dir)) ?>><?php echo(htmlentities($file)) ?></a>
+                    Filename: <a href=<?php echo(htmlentities($dir)) ?>><?php echo(htmlentities($file)) ?></a>
+                    
                     <form action="delete.php" method="post">
                          <input type="submit" value="Delete">
                          <input type="hidden" name="delete" value = <?php echo(htmlentities($file)); ?>>
