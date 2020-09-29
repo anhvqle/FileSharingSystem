@@ -31,7 +31,7 @@ $username = trim($username);
                          <input type="submit" value="See file">
                          <input type="hidden" name="username" value = <?php echo($username); ?>>
                     </form> -->
-                    <a href=<?php echo(htmlentities($file)) ?>><?php echo(htmlentities($file)) ?></a>
+                    <a href=<?php echo(htmlentities($dir)) ?>><?php echo(htmlentities($file)) ?></a>
                     <form action="delete.php" method="post">
                          <input type="submit" value="Delete">
                          <input type="hidden" name="username" value = <?php echo($username); ?>>
