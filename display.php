@@ -47,28 +47,10 @@ $username = trim($username);
       <input type="submit" name="submit" value="Upload File" />
     </p>
     </form>
-    <?php
-//     echo($_POST['uploadedfile']);
-    if(isset($_POST['submit'])){
-     //    echo($_FILES['uploadedfile']['name']);
-     //    echo($_FILES['uploadedfile']['type']);
-     //    echo($_FILES['uploadedfile']['size']);
-     //    echo($_FILES['uploadedfile']['tmp_name']);
-
-        $filename = basename($_FILES['uploadedfile']['name']);
-        $filepath = "$username/$filename";
-
-     if( move_uploaded_file($_FILES['uploadedfile']['tmp_name'], $filepath) ){
-          echo("upload_success");
-          exit;
-     }else{
-          echo("upload_failure");
-          
-          exit;
-     }
-
-    }
-    ?>
+    
+    <form action="index.html" method="post">
+        <input type="submit" value="Logout">
+    </form>
   </body>
 </html>
 
