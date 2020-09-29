@@ -8,3 +8,11 @@ $username = trim($username);
  }
 
 ?>
+
+<body>
+          <form action="display.php" method="post">
+          <p>Delete success: Click to direct to your file system</p>
+          <input type="hidden" name="username" value = <?php echo($username); ?>>
+          <input type="submit" value="Display">
+     </form>  
+</body>
