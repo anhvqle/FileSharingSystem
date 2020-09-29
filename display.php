@@ -35,6 +35,7 @@ $username = trim($username);
      <?php     
           }
     ?>
+    <br><br>
     <p>Upload your file </p>
     <form enctype="multipart/form-data" action = "update.php" method="post">
     <p>
@@ -46,18 +47,19 @@ $username = trim($username);
     </p>
     </form>
 
+    <br><br>
     <p>Send files to another users </p>
     <form enctype="multipart/form-data" action = "sendFile.php" method="post">
     <p>
       <input type="hidden" name="MAX_FILE_SIZE" value="20000000" />
-      <label>Enter the username you want to send file to: <input type="text" name="sendToName"></label>
+      <label>Enter the username you want to send file to: <input type="text" name="userGetFile"></label>
     </p>
     <p>
         <label for="uploadfile_input">Choose a file to send:</label> <input name="uploadedfile" type="file" id="uploadfile_input" />
         <input type="submit" name="submit" value="Send File" />
     </p>
     </form>
-    
+    <br><br>
     <form action="index.html">
         <input type="submit" value="Logout">
     </form>
