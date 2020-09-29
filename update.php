@@ -8,6 +8,13 @@
 
      if( move_uploaded_file($_FILES['uploadedfile']['tmp_name'], $filepath) ){
         ?>
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+        </head>
         <body>
         <form action="display.php" method="post">
                 <p>Update success: Click to direct to your file system</p>
@@ -15,6 +22,7 @@
                 <input type="submit" value="Display">
             </form>  
         </body>
+        </html>
 <?php
           exit;
      }else{
