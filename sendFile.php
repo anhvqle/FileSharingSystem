@@ -1,5 +1,5 @@
 <?php
-    $userGetFile = $_POST("userGetFile");
+    $userGetFile = $_POST["userGetFile"];
 
     $file = fopen("users.txt", "r");
     $userDetected = false;
