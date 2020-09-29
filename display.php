@@ -1,5 +1,6 @@
 <?php
-$username = $_POST['username'];
+session_start();
+$username = $_SESSION['username'];
 $username = trim($username);
 ?>
 

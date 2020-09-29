@@ -3,12 +3,16 @@ $username = $_POST['username'];
 $username = trim($username);
 //echo("$username");
 
+session_start();
+
+
 $file = fopen("users.txt", "r");
 $userDetected = false;
 
 while(!feof($file) ){
     if($username == trim(fgets($file))){
           $userDetected = true;
+          $_SESSION['username'] = $username;
      //     header("Location: $username/form.php");
      //     exit;
     }
