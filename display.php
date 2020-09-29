@@ -27,14 +27,9 @@ $username = trim($username);
                // echo(htmlentities($dir));
                ?>         
                     Filename: <?php echo(htmlentities($file)) ?>
-                    <!-- <form action="<?php echo(htmlentities($dir)) ?>" method="post">
-                         <input type="submit" value="See file">
-                         <input type="hidden" name="username" value = <?php echo($username); ?>>
-                    </form> -->
                     <a href=<?php echo(htmlentities($dir)) ?>><?php echo(htmlentities($file)) ?></a>
                     <form action="delete.php" method="post">
                          <input type="submit" value="Delete">
-                         <input type="hidden" name="username" value = <?php echo($username); ?>>
                          <input type="hidden" name="delete" value = <?php echo(htmlentities($file)); ?>>
                     </form>
      <?php     
@@ -45,7 +40,6 @@ $username = trim($username);
       <input type="hidden" name="MAX_FILE_SIZE" value="20000000" />
       <label for="uploadfile_input">Choose a file to upload:</label> <input name="uploadedfile" type="file" id="uploadfile_input" />
     </p>
-    <input type="hidden" name="username" value = <?php echo($username); ?>>
     <p>
       <input type="submit" name="submit" value="Upload File" />
     </p>
