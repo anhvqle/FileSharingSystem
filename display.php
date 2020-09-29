@@ -23,7 +23,7 @@ $username = trim($username);
           foreach($files as $file){
                //echo $file;
             //    $file = str_replace(" ", "\ ", $file);
-               $dir = sprintf("%s/%s", $username, urlencode($file));
+               $dir = sprintf("%s/%s", $username, rawurlencode($file));
                // echo(htmlentities($dir));
                ?>         
                     Filename: <a href=<?php echo(htmlentities($dir)) ?>><?php echo(htmlentities($file)) ?></a>
