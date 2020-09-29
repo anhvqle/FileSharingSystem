@@ -7,14 +7,14 @@ $username = trim($username);
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-     
+
     <meta charset="utf-8">
     <title><?php echo(htmlentities($username)); ?></title>
-    
+
   </head>
 
   <body>
- 
+
     <h1>Welcome Back, <?php echo(htmlentities($username)); ?></h1>
     <?php
           // Display all files
@@ -25,18 +25,18 @@ $username = trim($username);
             //    $file = str_replace(" ", "\ ", $file);
                $dir = sprintf("%s/%s", $username, rawurlencode($file));
                // echo(htmlentities($dir));
-               ?>         
+               ?>
                     Filename: <a href=<?php echo(htmlentities($dir)) ?>><?php echo(htmlentities($file)) ?></a>
 
                     <form action="delete.php" method="post">
                          <input type="submit" value="Delete">
-                         <input type="hidden" name="delete" value = <?php echo(htmlentities($file)); ?>>
+                         <input id="deleteFile" type="hidden" name="delete" value = <?php echo(htmlentities($file)); ?>>
                     </form>
-     <?php     
+     <?php
           }
     ?>
     <br><br>
-    <p>Upload your file </p>
+    <h2>Upload your file </h2>
     <form enctype="multipart/form-data" action = "update.php" method="post">
     <p>
       <input type="hidden" name="MAX_FILE_SIZE" value="20000000" />
@@ -65,6 +65,3 @@ $username = trim($username);
     </form>
   </body>
 </html>
-
-
-
