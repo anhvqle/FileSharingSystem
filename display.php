@@ -27,10 +27,11 @@ $username = trim($username);
                // echo(htmlentities($dir));
                ?>         
                     Filename: <?php echo(htmlentities($file)) ?>
-                    <form action="<?php echo(htmlentities($dir)) ?>" method="post">
+                    <!-- <form action="<?php echo(htmlentities($dir)) ?>" method="post">
                          <input type="submit" value="See file">
                          <input type="hidden" name="username" value = <?php echo($username); ?>>
-                    </form>
+                    </form> -->
+                    <a href=<?php echo(htmlentities($file)) ?>><?php echo(htmlentities($file)) ?></a>
                     <form action="delete.php" method="post">
                          <input type="submit" value="Delete">
                          <input type="hidden" name="username" value = <?php echo($username); ?>>

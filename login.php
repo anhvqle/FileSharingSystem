@@ -1,12 +1,6 @@
 <?php
 session_start();
-$username = "";
-if(isset($_POST['delete'])){
-    $username = $_POST['username'];
-}
-else{
-    $username = $_SESSION['username'];
-}
+$username = $_POST['username'];
 
 $username = trim($username);
 //echo("$username");
@@ -32,6 +26,8 @@ while(!feof($file) ){
 
 
  if($userDetected){
+     header("Location: display.php");
+     exit;
      ?>
      <!DOCTYPE html>
      <html lang="en">
