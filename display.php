@@ -14,7 +14,7 @@ $username = trim($username);
 
   <body>
  
-    <h1>Welcome Back <?php echo(htmlentities($username)); ?></h1>
+    <h1>Welcome Back, <?php echo(htmlentities($username)); ?></h1>
     <?php
           // Display all files
           $files = array_diff(scandir($username), array('.', '..'));

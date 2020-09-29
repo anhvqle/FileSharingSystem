@@ -13,10 +13,10 @@ $username = trim($username);
           <form action="display.php" method="post" id = "delete">
           <p>Delete success: Click to direct to your file system</p>
           <input type="hidden" name="username" value = <?php echo($username); ?>>
-          <input type="submit" value="Display">
+          <input type="submit" value="Display" id = "deleteBtn">
      </form>  
      <script>
-        document.getGetElementById("delete").submit() 
+        document.getGetElementById("deleteBtn").submit();
     </script>
      
 </body>
