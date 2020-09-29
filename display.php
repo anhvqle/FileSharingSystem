@@ -21,6 +21,7 @@ $username = trim($username);
           // print_r($files);
           foreach($files as $file){
                //echo $file;
+               $file = str_replace(" ", "\ ", $file);
                $dir = "$username/$file";
                // echo(htmlentities($dir));
                ?>         
