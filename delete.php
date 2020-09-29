@@ -6,6 +6,6 @@ $username = trim($username);
      $filepath = trim($_POST["delete"]);
      unlink($filepath);
  }
- echo(trim($_POST["delete"]));
- //header("Location: display.php");
+//  echo(trim($_POST["delete"]));
+ header("Location: display.php");
 ?>
