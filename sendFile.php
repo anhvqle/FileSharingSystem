@@ -16,7 +16,20 @@
 
 
     if($userDetected){
-        echo("User detected");
+        if(isset($_POST['submit'])){
+            $filename = basename($_FILES['uploadedfile']['name']);
+            $filepath = "$userGetFile/$filename";
+    
+         if( move_uploaded_file($_FILES['uploadedfile']['tmp_name'], $filepath) ){
+              header("Location: display.php");
+              exit;
+         }else{
+              echo("upload_failure");
+              
+              exit;
+         }
+    
+        }
         exit;
     }
     else{
