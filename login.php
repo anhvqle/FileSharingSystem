@@ -1,9 +1,17 @@
 <?php
-$username = $_POST['username'];
+session_start();
+$username = "";
+if(isset($_POST['delete'])){
+    $username = $_POST['username'];
+}
+else{
+    $username = $_SESSION['username'];
+}
+
 $username = trim($username);
 //echo("$username");
 
-session_start();
+
 
 
 $file = fopen("users.txt", "r");
