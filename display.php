@@ -30,7 +30,7 @@ $username = trim($username);
 
                     <form action="delete.php" method="post">
                          <input type="submit" value="Delete">
-                         <input type="hidden" name="delete" value = <?php echo(htmlentities($file)); ?>>
+                         <input type="hidden" name="delete" value = <?php echo(htmlentities($dir)); ?>>
                     </form>
      <?php     
           }
